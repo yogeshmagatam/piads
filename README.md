@@ -36,4 +36,12 @@ sudo systemctl daemon-reload
 sudo systemd restart video_player.service
 ```
 - This reloads the service file and restarts the service file.
+
+- For executon for web app use vs code and add the given files into it.
+- run the python file as:
+
+```ssh
+python web_app.py
+```
+- This executes and it opens a web portal where you can download and upload the video files
  
