@@ -36,7 +36,7 @@ def play_video_fullscreen(video_path):
   instance.release()
 
 if __name__ == "__main__":
-  # Replace with a list of video paths
+  # Replace with a list of video paths as i placed my video path
   path =  "/home/yogesh/pi_files/media"
 
   for file in os.listdir(path):
