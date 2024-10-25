@@ -6,3 +6,34 @@ then to run the advertisements i have created a service file to run in the backg
 - So i have created a web page where you can upload and download the videos.
 - For frontend i used html and css and for backend i used python for uploading and downloading the video.
 
+## Installation
+
+pi requires [python](https://python.org) v12+ to run.
+
+Install the dependencies and devDependencies and start the server.
+
+```sh
+cd <folder name>
+python piads.py
+```
+This is used to run the script manually
+
+For automation
+
+```ssh
+sudo systemd enable video_player.service
+sudo systemd start video_player.service
+sudo systemd status video_player.service
+```
+- The first one enables the script to run,
+- Second one starts the process,
+- Third one checks the status if it is working correctly or not,
+- And finally you are good to go.
+- But if you face any issues while running the service then use this:
+  
+```ssh
+sudo systemctl daemon-reload
+sudo systemd restart video_player.service
+```
+- This reloads the service file and restarts the service file.
+ 
