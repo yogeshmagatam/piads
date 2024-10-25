@@ -6,9 +6,9 @@ then to run the advertisements i have created a service file to run in the backg
 - So i have created a web page where you can upload and download the videos.
 - For frontend i used html and css and for backend i used python for uploading and downloading the video.
 
-## Installation
+## Installation and Execution
 
-pi requires [python](https://python.org) v12+ to run.
+pi requires [python](https://python.org) v10+ and some of the library files to run.
 
 Install the dependencies and devDependencies and start the server.
 
