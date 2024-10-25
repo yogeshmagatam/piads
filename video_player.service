@@ -1,0 +1,15 @@
+[Unit]
+Description=Video Player Service
+After=graphical.target
+
+[Service]
+Type=simple
+User=yogesh
+ExecStart=/usr/bin/python3 /home/yogesh/pi_files/piads.py
+Restart=on-failure
+RemainAfterExit=yes
+Interval=1min
+
+[Install]
+WantedBy=multi-user.target
+
