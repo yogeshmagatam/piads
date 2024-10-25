@@ -1,4 +1,4 @@
-# Piads
+# PIADS
 # Reminder: This can be executed only on raspberry pi.
 - In this the main goal is to show or preview advertisements using raspberri pi.
 - The first step i have done is to take a raspberry pi (you can use any version) then i just created a python file and i wrote the script to run the code
