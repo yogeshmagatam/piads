@@ -1,0 +1,197 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    text-align: center;
+        background: linear-gradient(135deg, rgba(248,250,252,0.92) 0%, rgba(224,231,255,0.92) 100%);
+    /* Removed background image */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    animation: gradientBG 10s ease-in-out infinite;
+    background-blend-mode: lighten;
+    color: #22223b;
+}
+
+h1 {
+    color: #4f46e5;
+    margin-top: 40px;
+    letter-spacing: 2px;
+    font-size: 2.5em;
+    animation: fadeIn 1s ease;
+    font-weight: 700;
+    text-shadow: 0 2px 8px #e0e7ff;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px auto;
+    max-width: 480px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 32px rgba(79, 70, 229, 0.10);
+    animation: fadeIn 1.5s ease;
+    border: 1px solid #e0e7ff;
+}
+
+li {
+    margin-bottom: 10px;
+    padding: 14px 0;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 1.13em;
+    transition: background 0.3s, transform 0.2s;
+    letter-spacing: 0.5px;
+}
+
+li:hover {
+    background: #eef2ff;
+    transform: scale(1.02);
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+a { 
+    text-decoration: none;
+    color: #6366f1;
+    transition: color 0.2s;
+    font-weight: 500;
+    border-bottom: 1px dashed #6366f1;
+    padding-bottom: 2px;
+}
+
+a:hover {
+    color: #1e40af;
+    text-decoration: underline;
+    border-bottom: 1px solid #4f46e5;
+}
+
+form {
+    margin: 40px auto;
+    padding: 32px 40px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 32px rgba(79, 70, 229, 0.10);
+    display: inline-block;
+    animation: fadeIn 1.5s ease;
+    border: 1px solid #e0e7ff;
+}
+
+input[type="file"] {
+    margin-bottom: 18px;
+    border: 1.5px solid #c7d2fe;
+    border-radius: 8px;
+    padding: 10px 16px;
+    background: #f1f5f9;
+    color: #4f46e5;
+    font-size: 1.08em;
+    cursor: pointer;
+    transition: border 0.2s, box-shadow 0.3s, background 0.2s;
+    box-shadow: 0 1px 6px rgba(99, 102, 241, 0.09);
+    outline: none;
+    animation: buttonPop 0.8s cubic-bezier(.68,-0.55,.27,1.55);
+    font-weight: 500;
+}
+
+input[type="file"]:hover,
+input[type="file"]:focus {
+    border: 2px solid #6366f1;
+    background: #e0e7ff;
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.13);
+}
+
+input[type="submit"] {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b); /* Changed to vibrant pink-orange */
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 48px;
+    font-size: 1.18em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.3s, filter 0.2s;
+    box-shadow: 0 6px 24px rgba(255, 65, 108, 0.18), 0 2px 8px #ff4b2b;
+    animation: buttonPop 0.8s cubic-bezier(.68,-0.55,.27,1.55);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #ff416c;
+    outline: none;
+    filter: drop-shadow(0 2px 8px #ff4b2b);
+}
+
+input[type="submit"]:hover, 
+input[type="submit"]:focus {
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    transform: scale(1.09) rotate(-2deg);
+    box-shadow: 0 12px 32px rgba(255, 75, 43, 0.22), 0 4px 16px #ff416c;
+    border-color: #ff4b2b;
+    filter: brightness(1.08) drop-shadow(0 4px 16px #ff416c);
+}
+
+input[type="submit"]::after {
+    content: "⬆";
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%) scale(0.8);
+    opacity: 0;
+    transition: opacity 0.2s, transform 0.2s;
+    font-size: 1.3em;
+    pointer-events: none;
+}
+
+input[type="submit"]:hover::after,
+input[type="submit"]:focus::after {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.2);
+}
+
+/* Override Bootstrap .btn-primary */
+.btn.btn-primary {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  border: none;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect */
+.btn.btn-primary:hover {
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Subtle fade-in for all elements */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+/* Button pop animation */
+@keyframes buttonPop {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Animated background gradient */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%;}
+    50% { background-position: 100% 50%;}
+    100% { background-position: 0% 50%;}
+}
