@@ -1,10 +1,18 @@
 # PIADS
-- In this the main goal is to show or preview advertisements using raspberri pi.
-- The first step i have done is to take a raspberry pi (you can use any version) then i just created a python file and i wrote the script to run the code
-then to run the advertisements i have created a service file to run in the background while the pi is booting or getting started.
-- i just wrote the code in such a way that the adds(videos) can be played on the startup ,now you may think i have created a media folder but i have limited videos and i wanted to add new video files into it.
-- So i have created a web page where you can upload and download the videos.
-- For frontend i have used html and css and for backend i used python for uploading and downloading the video.
+
+- The main goal of this project is to show (or) display advertisement videos using raspberry pi for promoting products for a specific company (or) companies which    provides it's videos to bring awareness in the market and attract people.
+- // you may use any board you want
+- The first step i have done is :
+  - I have taken raspberry pi (any version).
+- Second step : 
+  - I have created two python files where one is the main file for displaying ads and the other one is for uploading videos.
+- Third step :
+  - I wrote the script to exectue the code.
+- To run the advertisements (or) videos , i have created a service file (video_player.service) to be executed in the background while the pi is booting (or)          getting started.
+- I wrote the logic in such a way that ads (or) videos can be played on the startup of a cpu (or) booting of pi.
+- Now you may think that i have created a media folder , but it contains only few videos!! , and you wanted to add new video files into it.
+- So i have created a web page where you can upload the videos and it stores the videos directly into the media folder and also you can see the uploaded videos.
+- For Frontend i have used html and css and for Backend i have used python-flask for uploading the video and displaying the uploaded videos to verify that the        uploaded video is correct or not.
 
 ## Installation and Execution
 
@@ -43,5 +51,5 @@ sudo systemd restart video_player.service
 ```ssh
 python web_app.py
 ```
-- This executes and it opens a web portal where you can download and upload the video files
+- This executes and it opens a web portal where you can upload the video files and view the videos.
  
