@@ -1,24 +1,33 @@
+/* Color palette */
+:root {
+    --dark-grey: #23272a;
+    --darker-grey: #181a1b;
+    --yellow-green: #b6e214;
+    --yellow-green-dark: #8db20f;
+    --white: #f8fafc;
+}
+
+/* Background and text */
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     text-align: center;
-        background: linear-gradient(135deg, rgba(248,250,252,0.92) 0%, rgba(224,231,255,0.92) 100%);
-    /* Removed background image */
+    background: linear-gradient(135deg, var(--dark-grey) 0%, var(--darker-grey) 100%);
     margin: 0;
     padding: 0;
     min-height: 100vh;
     animation: gradientBG 10s ease-in-out infinite;
     background-blend-mode: lighten;
-    color: #22223b;
+    color: var(--yellow-green);
 }
 
 h1 {
-    color: #4f46e5;
+    color: var(--yellow-green);
     margin-top: 40px;
     letter-spacing: 2px;
     font-size: 2.5em;
     animation: fadeIn 1s ease;
     font-weight: 700;
-    text-shadow: 0 2px 8px #e0e7ff;
+    text-shadow: 0 2px 8px var(--dark-grey);
 }
 
 ul {
@@ -26,24 +35,25 @@ ul {
     padding: 0;
     margin: 30px auto;
     max-width: 480px;
-    background: #fff;
+    background: var(--darker-grey);
     border-radius: 16px;
-    box-shadow: 0 4px 32px rgba(79, 70, 229, 0.10);
+    box-shadow: 0 4px 32px rgba(182, 226, 20, 0.10);
     animation: fadeIn 1.5s ease;
-    border: 1px solid #e0e7ff;
+    border: 1px solid var(--yellow-green-dark);
 }
 
 li {
     margin-bottom: 10px;
     padding: 14px 0;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid #333;
     font-size: 1.13em;
     transition: background 0.3s, transform 0.2s;
     letter-spacing: 0.5px;
+    color: var(--white);
 }
 
 li:hover {
-    background: #eef2ff;
+    background: #23272a;
     transform: scale(1.02);
 }
 
@@ -53,41 +63,41 @@ li:last-child {
 
 a { 
     text-decoration: none;
-    color: #6366f1;
+    color: var(--yellow-green);
     transition: color 0.2s;
     font-weight: 500;
-    border-bottom: 1px dashed #6366f1;
+    border-bottom: 1px dashed var(--yellow-green);
     padding-bottom: 2px;
 }
 
 a:hover {
-    color: #1e40af;
+    color: var(--yellow-green-dark);
     text-decoration: underline;
-    border-bottom: 1px solid #4f46e5;
+    border-bottom: 1px solid var(--yellow-green-dark);
 }
 
 form {
     margin: 40px auto;
     padding: 32px 40px;
-    background: #fff;
+    background: var(--dark-grey);
     border-radius: 16px;
-    box-shadow: 0 4px 32px rgba(79, 70, 229, 0.10);
+    box-shadow: 0 4px 32px rgba(182, 226, 20, 0.10);
     display: inline-block;
     animation: fadeIn 1.5s ease;
-    border: 1px solid #e0e7ff;
+    border: 1px solid var(--yellow-green-dark);
 }
 
 input[type="file"] {
     margin-bottom: 18px;
-    border: 1.5px solid #c7d2fe;
+    border: 1.5px solid var(--yellow-green-dark);
     border-radius: 8px;
     padding: 10px 16px;
-    background: #f1f5f9;
-    color: #4f46e5;
+    background: var(--darker-grey);
+    color: var(--yellow-green);
     font-size: 1.08em;
     cursor: pointer;
     transition: border 0.2s, box-shadow 0.3s, background 0.2s;
-    box-shadow: 0 1px 6px rgba(99, 102, 241, 0.09);
+    box-shadow: 0 1px 6px rgba(182, 226, 20, 0.09);
     outline: none;
     animation: buttonPop 0.8s cubic-bezier(.68,-0.55,.27,1.55);
     font-weight: 500;
@@ -95,14 +105,14 @@ input[type="file"] {
 
 input[type="file"]:hover,
 input[type="file"]:focus {
-    border: 2px solid #6366f1;
-    background: #e0e7ff;
-    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.13);
+    border: 2px solid var(--yellow-green);
+    background: var(--dark-grey);
+    box-shadow: 0 4px 16px rgba(182, 226, 20, 0.13);
 }
 
 input[type="submit"] {
-    background: linear-gradient(135deg, #ff416c, #ff4b2b); /* Changed to vibrant pink-orange */
-    color: #fff;
+    background: linear-gradient(135deg, var(--yellow-green), var(--yellow-green-dark));
+    color: var(--dark-grey);
     border: none;
     border-radius: 30px;
     padding: 14px 48px;
@@ -111,22 +121,22 @@ input[type="submit"] {
     letter-spacing: 1px;
     cursor: pointer;
     transition: background 0.2s, transform 0.2s, box-shadow 0.3s, filter 0.2s;
-    box-shadow: 0 6px 24px rgba(255, 65, 108, 0.18), 0 2px 8px #ff4b2b;
+    box-shadow: 0 6px 24px rgba(182, 226, 20, 0.18), 0 2px 8px var(--yellow-green-dark);
     animation: buttonPop 0.8s cubic-bezier(.68,-0.55,.27,1.55);
     position: relative;
     overflow: hidden;
-    border: 2px solid #ff416c;
+    border: 2px solid var(--yellow-green-dark);
     outline: none;
-    filter: drop-shadow(0 2px 8px #ff4b2b);
+    filter: drop-shadow(0 2px 8px var(--yellow-green-dark));
 }
 
 input[type="submit"]:hover, 
 input[type="submit"]:focus {
-    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    background: linear-gradient(135deg, var(--yellow-green-dark), var(--yellow-green));
     transform: scale(1.09) rotate(-2deg);
-    box-shadow: 0 12px 32px rgba(255, 75, 43, 0.22), 0 4px 16px #ff416c;
-    border-color: #ff4b2b;
-    filter: brightness(1.08) drop-shadow(0 4px 16px #ff416c);
+    box-shadow: 0 12px 32px rgba(182, 226, 20, 0.22), 0 4px 16px var(--yellow-green-dark);
+    border-color: var(--yellow-green);
+    filter: brightness(1.08) drop-shadow(0 4px 16px var(--yellow-green));
 }
 
 input[type="submit"]::after {
@@ -139,6 +149,7 @@ input[type="submit"]::after {
     transition: opacity 0.2s, transform 0.2s;
     font-size: 1.3em;
     pointer-events: none;
+    color: var(--dark-grey);
 }
 
 input[type="submit"]:hover::after,
@@ -149,22 +160,22 @@ input[type="submit"]:focus::after {
 
 /* Override Bootstrap .btn-primary */
 .btn.btn-primary {
-  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  background: linear-gradient(135deg, var(--yellow-green), var(--yellow-green-dark));
   border: none;
-  color: #fff;
+  color: var(--dark-grey);
   padding: 12px 24px;
   border-radius: 30px;
   font-weight: bold;
   font-size: 16px;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(182, 226, 20, 0.2);
 }
 
 /* Hover effect */
 .btn.btn-primary:hover {
-  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+  background: linear-gradient(135deg, var(--yellow-green-dark), var(--yellow-green));
   transform: scale(1.05);
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 25px rgba(182, 226, 20, 0.3);
 }
 
 /* Subtle fade-in for all elements */
